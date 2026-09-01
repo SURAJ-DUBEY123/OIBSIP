@@ -1,0 +1,162 @@
+====================================================
+NMAP NETWORK SCANNING REPORT
+====================================================
+
+Target: 127.0.0.1 (Localhost)
+
+Operating System: Windows
+
+----------------------------------------------------
+1. BASIC SCAN
+----------------------------------------------------
+
+Command: nmap 127.0.0.1
+
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-09-02 02:34 +0530
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00060s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+8254/tcp open  unknown
+8888/tcp open  sun-answerbook
+
+Nmap done: 1 IP address (1 host up) scanned in 0.50 seconds
+
+
+----------------------------------------------------
+2. SERVICE VERSION SCAN
+----------------------------------------------------
+
+Command: nmap -sV 127.0.0.1
+
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-09-02 02:35 +0530
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0013s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE         VERSION
+135/tcp  open  msrpc           Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+8254/tcp open  unknown
+8888/tcp open  sun-answerbook?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8254-TCP:V=7.991%I=7%D=9/2%Time=6A973E27%P=i686-pc-windows-windows%
+SF:r(GetRequest,133,"HTTP/1\.0\x20500\x20Server\x20Error\r\nContent-Length
+SF::\x20129\r\nContent-Type:\x20text/html\r\nX-OSSProxy:\x20OSSProxy\x201\
+SF:.3\.340\.314\x20\(Build\x20340\.314\x20Win32\x20en-us\)\(Jun\x2018\x202
+SF:025\x2018:41:58\)\r\nConnection:\x20close\r\n\r\n<HTML><TITLE>500\x20In
+SF:ternal\x20Server\x20Error</TITLE><BODY><H1>500\x20Internal\x20Server\x2
+SF:0Error</H1><P>An\x20unknown\x20error\x20occured</BODY></HTML>\r\n")%r(H
+SF:TTPOptions,133,"HTTP/1\.0\x20500\x20Server\x20Error\r\nContent-Length:\
+SF:x20129\r\nContent-Type:\x20text/html\r\nX-OSSProxy:\x20OSSProxy\x201\.3
+SF:\.340\.314\x20\(Build\x20340\.314\x20Win32\x20en-us\)\(Jun\x2018\x20202
+SF:5\x2018:41:58\)\r\nConnection:\x20close\r\n\r\n<HTML><TITLE>500\x20Inte
+SF:rnal\x20Server\x20Error</TITLE><BODY><H1>500\x20Internal\x20Server\x20E
+SF:rror</H1><P>An\x20unknown\x20error\x20occured</BODY></HTML>\r\n")%r(Fou
+SF:rOhFourRequest,133,"HTTP/1\.0\x20500\x20Server\x20Error\r\nContent-Leng
+SF:th:\x20129\r\nContent-Type:\x20text/html\r\nX-OSSProxy:\x20OSSProxy\x20
+SF:1\.3\.340\.314\x20\(Build\x20340\.314\x20Win32\x20en-us\)\(Jun\x2018\x2
+SF:02025\x2018:41:58\)\r\nConnection:\x20close\r\n\r\n<HTML><TITLE>500\x20
+SF:Internal\x20Server\x20Error</TITLE><BODY><H1>500\x20Internal\x20Server\
+SF:x20Error</H1><P>An\x20unknown\x20error\x20occured</BODY></HTML>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8888-TCP:V=7.991%I=7%D=9/2%Time=6A973E27%P=i686-pc-windows-windows%
+SF:r(GetRequest,7B,"HTTP/1\.0\x20400\x20Bad\r\nServer:\x20csproxy/1\.1\.5-
+SF:1-R1\r\nConnection:\x20close\r\nDate:\x20Tue,\x2001\x20Sep\x202026\x202
+SF:1:05:43\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,7B,"HTTP
+SF:/1\.0\x20400\x20Bad\r\nServer:\x20csproxy/1\.1\.5-1-R1\r\nConnection:\x
+SF:20close\r\nDate:\x20Tue,\x2001\x20Sep\x202026\x2021:05:43\x20GMT\r\nCon
+SF:tent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,7B,"HTTP/1\.0\x20400\x2
+SF:0Bad\r\nServer:\x20csproxy/1\.1\.5-1-R1\r\nConnection:\x20close\r\nDate
+SF::\x20Tue,\x2001\x20Sep\x202026\x2021:05:44\x20GMT\r\nContent-Length:\x2
+SF:00\r\n\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.64 seconds
+
+
+----------------------------------------------------
+3. OS DETECTION SCAN
+----------------------------------------------------
+
+Command: nmap -O 127.0.0.1
+
+Starting Nmap 7.991 ( https://nmap.org ) at 2026-09-02 02:36 +0530
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00065s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+8254/tcp open  unknown
+8888/tcp open  sun-answerbook
+Device type: general purpose
+Running: Microsoft Windows 11
+OS CPE: cpe:/o:microsoft:windows_11
+OS details: Microsoft Windows 11 23H2
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.84 seconds
+
+
+----------------------------------------------------
+4. OPEN PORT ANALYSIS
+----------------------------------------------------
+
+Port 135: Microsoft Windows RPC
+
+Microsoft Windows RPC uses port 135 for communication between windows components and aplications. Exposing RPC services unnecessarily can increase the system attack surface. Open port does not necessarily mean that the system vulnerable, security depends on specific RPC services, firewall configuration, patch level etc.
+
+
+Port 445: Microsoft-DS/SMB
+
+Microsoft SMB services used port 445 for file and printer sharing and windows network communication. If exposed to untrusted networks, it can increase the attack surface and can pose serious security vulnerabilities
+
+
+Port 8254/tcp: PremiereOpinion-related services
+
+Nmap identified this service a unknown, but on further investigation using windows powershell, it showed that the this port is associated with pmropn.exe process from PremiereOpinion. The service is listening on localhost. Therefore, it has limited exposure to network and not directly listening on external network interfaces.
+
+
+Port 8888/tcp: PremiereOpinion service
+
+Nmap identified an uncertain service and detected an HTTP-like response. Further investigations showed that the port belongs to pmservice.exe process, associated with windows service named PremiereOpinion. The service is listening to 0.0.0.0 which means it can listen to all local IPv4 interfaces. The service needs to be reviewed and restricted if not required.
+
+----------------------------------------------------
+5. SECURITY OBSERVATIONS
+----------------------------------------------------
+
+Nmap scanned 1000 ports, out of which 4 were found open.
+
+2. Ports 135 and 445 are associated with windows networking functionality but they can increase the attack surface of system.
+
+3. Port 8254 is associated with PremiereOpinion and is restricted to localhost.
+
+4. Port 8888 is associated with PremiereOpinion service and can listen to all IPv4 services.
+
+5. An open port does not necessarily mean that the system is vulnerable.
+
+
+----------------------------------------------------
+6. CONCLUSION
+----------------------------------------------------
+
+The Nmap assessment identified four open TCP ports on the
+local Windows 11 system: 135, 445, 8254 and 8888.
+
+Ports 135 and 445 are associated with Windows networking
+services, while ports 8254 and 8888 are associated with
+PremierOpinion software.
+
+Port 8254 is bound only to localhost, while port 8888 is
+configured to listen on all IPv4 interfaces and therefore
+warrants additional access-control review.
+
+The scan does not by itself establish that any of the
+identified services are vulnerable. Reviewing unnecessary
+services, firewall rules, software updates and network
+exposure can help reduce the system's attack surface.
